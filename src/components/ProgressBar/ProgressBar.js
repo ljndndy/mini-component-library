@@ -26,7 +26,13 @@ const ProgressBar = ({ value, size }) => {
   if (progress < 0) {progress = 0;}
   if (progress > 100) {progress = 100;}
 
-  return <Wrapper style={styles} progress={progress}>{value}</Wrapper>;
+  return <Wrapper
+            role="progressbar"
+            aria-valuenow={value}
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style={styles} 
+            progress={progress}></Wrapper>;
 };
 
 const Wrapper = styled.div`
