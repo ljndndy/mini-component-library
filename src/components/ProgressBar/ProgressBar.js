@@ -32,7 +32,9 @@ const ProgressBar = ({ value, size }) => {
             aria-valuemin="0"
             aria-valuemax="100"
             style={styles} 
-            progress={progress}></Wrapper>;
+            progress={progress}>
+              <VisuallyHidden>{progress}%</VisuallyHidden>
+            </Wrapper>;
 };
 
 const Wrapper = styled.div`
@@ -43,6 +45,7 @@ const Wrapper = styled.div`
   padding: var(--padding);
 
   box-shadow: inset 0px 2px 4px ${COLORS.transparentGray35};
+  background-color: ${COLORS.transparentGray15};
 
   height: var(--height);
 
