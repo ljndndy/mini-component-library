@@ -37,6 +37,7 @@ const ProgressBar = ({ value, size }) => {
             </Wrapper>;
 };
 
+/* Josh's use of overflow: hidden instead of calcing the radius like I do is much cleaner! */
 const Wrapper = styled.div`
   --borderRadius: 4px;
   --padding: 0;
