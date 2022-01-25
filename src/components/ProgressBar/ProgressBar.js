@@ -31,7 +31,6 @@ const ProgressBar = ({ value, size }) => {
 
 const Wrapper = styled.div`
   --borderRadius: 4px;
-  --progressRadius: ${props => props.progress >= 99 ? '4px' : '4px 0 0 4px'};
   --padding: 0;
 
   border-radius: var(--borderRadius);
@@ -47,8 +46,9 @@ const Wrapper = styled.div`
     height: 100%;
     width: ${props => props.progress + '%'};
     background-color: ${COLORS.primary};
-
-    border-radius: var(--progressRadius);
+    
+    --rightRadius: ${props => props.progress > 98 ? (props.progress/100)*4 + 'px' : 0};
+    border-radius: 4px var(--rightRadius) var(--rightRadius) 4px;
   }
 `;
 
