@@ -76,9 +76,11 @@ const TextInput = styled.input`
   font-size: var(--fontSize);
   line-height: var(--height);
   color: inherit;
+  font-weight: 700;
 
   &::placeholder {
     color: ${COLORS.gray500};
+    font-weight: 400;
   }
 
   &:focus {
